@@ -65,7 +65,7 @@ names = ['Prashant','C H Raju']
 usernames = ['prashant','raju']
 passwords = ['9216','pdqc123']
 hashed_passwords = stauth.Hasher(passwords).generate()
-authenticator = stauth.Authenticate(names,usernames,hashed_passwords,'some_cookie_name','some_signature_key',cookie_expiry_days=30)
+authenticator = stauth.Authenticate(names,usernames,hashed_passwords,'some_cookie_name','some_signature_key',cookie_expiry_days=0)
 name, authentication_status, username = authenticator.login('Login', 'main')
         
 if st.session_state["authentication_status"]:
